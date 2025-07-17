@@ -4,21 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        a{color: black; text-decoration: none;}
+        ul{padding: 0; margin: 0; list-style: none;}
+        body{padding: 0; margin: 0; height: 100%;}
+      
+        .wrapper {
+            display: flex;                           
+            height: 100vh;                
+        }
+        .wrapper > header {
+            
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            
+        }
+        /* main & footer */
+        .content{
+            flex-direction: column;
+            margin-left: 250px;
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 250px);
+        }
 
-    <link rel="stylesheet" href="css/common.css">
+        .content>main {
+            height: calc(100% - 130px);
+            position: relative;
+            background-color: hotpink;
+        }
+        .content>footer {
+            background-color: yellow;
+            height: 130px;
+            bottom: 0;
+        }
+        /* 프로필 사진 */
+        .content>main>.photo{
+            border: 1px solid;
+            
+        }
+        /* 신규 버튼 */
+        .content>main>.new{
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            position: absolute;
+            bottom: 0;
+
+        }
+        /* 계정 정보 */
+        .content>main>.profile{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            right: 0;
+            top: 0;
+        }
+    </style>
 </head>
 <body>
-    
-
     <div class="wrapper">
         <header>
             <div class="top-header"></div>
-            <nav></nav>
+            <nav>
+                <h1 class = "logo">Travelgram</h1>
+                <ul class = "main-menu">
+                    <li><a href="javascript:void(0)">홈</a></li>
+                    <li><a href="javascript:void(0)">검색</a></li>
+                    <li><a href="javascript:void(0)">탐색 탭</a></li>
+                    <li><a href="javascript:void(0)">릴스</a></li>
+                    <li><a href="javascript:void(0)">메시지</a></li>
+                    <li><a href="javascript:void(0)">알람</a></li>
+                    <li><a href="javascript:void(0)">만들기</a></li>
+                    <li><a href="javascript:void(0)">프로필</a></li>
+                    
+                    <!-- 밑에 2개(Thread부터) -->
+
+                    <li class = "under-bar"><a href="javascript:void(0)">Thread</a></li>
+                    <li class = "under-bar"><a href="javascript:void(0)">더보기</a>
+                        <ul class = "sub-menu">
+                            <li>설정</li>
+                            <li>내 활동</li>
+                            <li>저장됨</li>
+                            <li>모드 전환</li>
+                            <li>문제 신고</li>
+                            <ul class = "under-sub-menu">
+                                <li>계정 전환</li>
+                                <li>로그 아웃</li>
+                            </ul>    
+                                
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <section></section>
-        </main>
-        <footer></footer>
+
+        <div class = "content">
+            <main>
+                <!-- 프로필 아이콘 -->
+                <section class = "photo">
+                    <a href="javascript:void(0)">프로필 사진</a>
+                </section>
+                <!-- 신규 아이콘 -->
+                <section class = "new"></section>
+
+                <!-- 계정 정보 -->
+                <section class = "profile"></section>
+            </main>
+        
+            <footer></footer>
+        </div>
     </div>
 </body>
 </html>

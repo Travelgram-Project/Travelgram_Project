@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        
+
+        *{box-sizing: border-box;}
+        a{color: black; text-decoration: none;}
+        ul{padding: 0; margin: 0; list-style: none;}
+        body{padding: 0; margin: 0; height: 100%;}
+      
+        .wrapper {
+            display: flex;                           
+                            
+        }
+        .wrapper > header {
+            
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            
+        }
+        /* 여기서부터 main */
+        .content{
+            flex-direction: column;
+            margin-left: 250px;
+            margin-right: 250px;
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 250px);
+        }
+
+        .content>main {
+            height: calc(100% - 130px);
+            position: relative;
+            
+        }
+       
+        main>.photo{
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            background-color: hotpink;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        /* 프로필 사진 아이콘 */
+        .fa-regular.fa-circle-user{
+            
+            font-size: 150px;
+        }
+
+        main>.new{
+            width: 100%;
+            max-width: 400px;
+            height: 200px;
+            
+            background-color: cyan;        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;    
+        }
+        .new>.new-circle{
+            border-radius: 50%;
+            background-color: lightgray;
+            opacity: 50%;
+            width: 120px;
+            height: 120px;
+            padding: 1px;
+            border: 1px double;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* background-color:rgb(25, 175, 118); */
+        }
+        .new-circle>img{
+            width: 50px;
+            /* background-color:rgb(11, 73, 124); */
+            height: 50px;
+        }
+        
+        .new>p{
+            /* background-color:rgb(12, 31, 117); */
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* 프로필(닉네임, 팔로우, 팔로워) */
+        main>.account{
+            /* background-color:rgb(17, 39, 71); */
+            position: absolute;
+            right: 100px;
+            top: 0;
+            /* background-color: blueviolet; */
+            width: 500px;
+            height: 500px;
+        }
+
+        .account>.first-bar{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin-bottom: 30px;
+            margin-top: 80px;
+            /* background-color:rgb(223, 29, 15); */
+        }
+        .account>.second-bar{
+            display: flex;
+            /* background-color:#00ff22; */
+            flex-direction: row;
+            gap: 30px;   
+            margin-bottom: 30px;
+        }
+        /* 게시물, 저장됨, 태그됨 */
+        .middle-bar{
+            height: 100px;   
+            /* background-color: brown; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .middle-bar>p{
+            margin: 0px 20px;
+        }
+        /* 시작하기 부분, 풋터위의 제일 밑에 덩어리 */
+        .add-bar{
+            height: 300px;
+            /* background-color: green; */
+            display: flex;
+            
+        }
+
+        .add-bar>p{
+            font-weight: bold;
+        }
+
+        /* 사진 등록, 카메라 아이콘 컨테이너 */
+        .add-bar>.camera{
+         
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            /* background-color:rgb(18, 57, 233); */
+        }
+        
+         .camera>div{
+            padding: 15px;
+        }
+        
+        .camera>div:nth-child(1){
+            
+            background-color:rgba(189, 192, 9, 0.74);
+            width: 100px;
+            height: 100px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: lightgray;
+        }
+        .camera>div:nth-child(1)>img{
+            width:40%;
+            height:40%;
+        }
+        .share-button{
+            padding: 10px;
+            /* background-color: rgb(80, 80, 193); */
+            border-radius: 13%;
+        }
+        .share-button>a{
+            color: white;
+        }
+        .content>footer {
+            background-color: yellow;
+            height: 130px;
+            bottom: 0;
+            position: relative;
+            
+        }
+        .footer-first{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-around;
+
+        }
+        .footer-second{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav>
+                <h1 class = "logo">Travelgram</h1>
+                <ul class = "main-menu">
+                    <li>
+                        
+                        <a href="javascript:void(0)">홈</a>
+                    </li>
+                    <li><a href="javascript:void(0)">검색</a></li>
+                    <li><a href="javascript:void(0)">탐색 탭</a></li>
+                    <li><a href="javascript:void(0)">릴스</a></li>
+                    <li><a href="javascript:void(0)">메시지</a></li>
+                    <li><a href="javascript:void(0)">알람</a></li>
+                    <li><a href="javascript:void(0)">만들기</a></li>
+                    <li><a href="javascript:void(0)">프로필</a></li>
+                    
+                    <!-- 밑에 2개(Thread부터) -->
+
+                    <li class = "under-bar"><a href="javascript:void(0)">Thread</a></li>
+                    <li class = "under-bar"><a href="javascript:void(0)">더보기</a>
+                        <ul class = "sub-menu">
+                            <li>설정</li>
+                            <li>내 활동</li>
+                            <li>저장됨</li>
+                            <li>모드 전환</li>
+                            <li>문제 신고</li>
+                            <ul class = "under-sub-menu">
+                                <li>계정 전환</li>
+                                <li>로그 아웃</li>
+                            </ul>    
+                                
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class = "content">
+            <main>
+                <!-- 프로필 아이콘 -->
+                <div class = "photo">
+                    <i class="fa-regular fa-circle-user"></i>
+                </div>
+                
+                <!-- 신규 아이콘 -->
+                <div class = "new">
+                    <div class="new-circle">
+                        <img src="./신규아이콘.png" alt="신규 아이콘">
+                    </div>
+                    <p>신규</p>
+                </div>
+
+                <!-- 계정 정보 -->
+                <div class = "account">
+                    <ul class="first-bar">
+                        <li>닉네임</li>
+                        <li>프로필 편집</li>
+                        <li>보관된 스토리 보기</li>
+                        <li>옵션</li>
+                    </ul>
+                    <ul class = "second-bar">
+                        <li>게시물</li>
+                        <li>팔로워</li>
+                        <li>팔로우</li>
+                    </ul>
+                    <h4>이름</h4>
+                </div>
+
+                <div class="middle-bar">
+                    <p>게시물</p>
+                    <p>저장됨</p>
+                    <p>태그됨</p>
+                </div>
+                <h4 style="margin: 20px 0 0 20px ">시작하기</h4>
+                <div class="add-bar">
+                    
+                    <!-- 사진 공유 -->
+                    <div class = "camera">
+                        <div>
+                            <img src="./카메라 아이콘.png" alt="카메라 아이콘">
+                        </div>
+                        <div>사진 공유</div>
+                        <div style = "text-align: left;">사진을 공유하면 회원님의 프로필에 표시됩니다</div>
+                        <div class = "share-button"><a href="javascript:void(0)">첫 사진 공유하기</a></div>
+                    </div>
+                    <!-- 프로필 사진 추가 -->
+                    <div class = "camera">
+                        <div>
+                            <img src="./카메라 아이콘.png" alt="카메라 아이콘">
+                        </div>
+                        <div>프로필 사진 추가</div>
+                        <div style = "text-align: left;">친구들이 회원들을 알아볼 수 있도록 프로필 사진을 추가하세요</div>
+                        <div class = "share-button"><a href="javascript:void(0)">프로필 사진 추가</a></div>
+                    </div>
+                </div>
+            </main>
+        
+            <footer>
+                <div class = "footer-first">
+                    <a href="javascript:void(0)">Meta</a>
+                    <a href="javascript:void(0)">소개</a>
+                    <a href="javascript:void(0)">블로그</a>
+                    <a href="javascript:void(0)">채용 정보</a>
+                    <a href="javascript:void(0)">도움말</a>
+                    <a href="javascript:void(0)">API</a>
+                    <a href="javascript:void(0)">개인정보처리방침</a>
+                    <a href="javascript:void(0)">약관</a>
+                    <a href="javascript:void(0)">위치</a>
+                    <a href="javascript:void(0)">Instargrma Life</a>
+                    <a href="javascript:void(0)">Threads</a>
+                    <a href="javascript:void(0)">연락처 업로드&비사용자</a>
+                    <a href="javascript:void(0)">Meta Verified</a>
+                </div>
+                <div class = "footer-second">
+                    <select id="language">
+                        <option value="" disabled selected>한국어</option>
+                        <option value="">일본어</option>
+                        <option value="">중국어</option>
+                        <option value="">영어</option>
+                    </select>
+                    <span>© 2025 Instagram from Meta</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

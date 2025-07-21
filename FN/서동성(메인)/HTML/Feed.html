@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed Mockup</title>
+    <link rel="stylesheet" href="feed.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: row;
+            /* 수정 */
+            min-height: 100vh;
+            /* 화면 전체 높이 채우기 */
+        }
+
+
+        /* 메뉴바 */
+
+        .menu-sidebar {
+            position: fixed;
+            width: 220px;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background: #fff;
+            border-right: 1px solid #dbdbdb;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            z-index: 1000;
+            display: flex;
+            /* 추가 */
+            flex-direction: column;
+            /* 추가 */
+        }
+
+        .menu-logo {
+            font-family: 'Satisfy', cursive;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 30px;
+            margin-left: 10px;
+        }
+
+        .menu-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex-grow: 1;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #000;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .menu-item img {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+        }
+
+        .menu-item:hover {
+            background: #f2f2f2;
+        }
+
+        .menu-footer {
+            border-top: 1px solid #dbdbdb;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-right: 10px;
+            margin-top: auto;
+            /* 추가: 맨 아래로 내리기 */
+        }
+
+        /* 피드 */
+        .feed-container {
+            flex-grow: 1;
+            max-width: 1280px;
+            padding: 20px;
+            margin: 0 auto;
+            /* 좌우 자동 마진 */
+            box-sizing: border-box;
+            width: calc(100% - 220px);
+            /* 사이드바 제외한 나머지 */
+        }
+
+        @media screen and (max-width: 900px) {
+            .feed-container {
+                margin-left: 80px;
+                /* 축소된 메뉴바 너비 */
+                max-width: calc(100% - 100px);
+                /* 좌우 여백 확보 */
+            }
+        }
+
+        .feed-story-section {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .feed-story {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+        }
+
+        .feed-post {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .feed-post-header {
+            background-color: #e0e0e0;
+            height: 50px;
+        }
+
+        .feed-post-image {
+            background-color: #d0d0d0;
+            height: 500px;
+        }
+
+        .feed-post-actions {
+            background-color: #e0e0e0;
+            height: 40px;
+        }
+
+        .feed-post-caption {
+            background-color: #f0f0f0;
+            height: 40px;
+        }
+
+
+        /* 반응형 메뉴바 */
+        @media screen and (max-width: 900px) {
+            .menu-sidebar {
+                width: 80px;
+                padding: 20px 8px;
+            }
+
+            .menu-logo {
+                display: none;
+            }
+
+            .menu-item {
+                justify-content: center;
+            }
+
+            .menu-item span {
+                display: none;
+            }
+
+            .menu-item img {
+                margin: 0;
+            }
+
+            .menu-footer {
+                display: none;
+
+            }
+
+            .feed-container {
+                margin-left: 80px;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <aside class="menu-sidebar">
+        <div class="menu-logo">Travelgram</div>
+
+        <nav class="menu-nav">
+            <a href="javascript:void(0)" class="menu-item">
+                <img src="/FN/서동성(메인)/CSS/icon-home.svg" alt="홈 아이콘">
+                <span>홈</span>
+            </a>
+            <a href="javascript:void(0)" class="menu-item">
+                <img src="/FN/서동성(메인)/CSS/icon-search.svg" alt="검색 아이콘">
+                <span>검색</span>
+            </a>
+            <a href="javascript:void(0)" class="menu-item">
+                <img src="/FN/서동성(메인)/CSS/icon-message.svg" alt="메시지 아이콘">
+                <span>메시지</span>
+            </a>
+            <a href="javascript:void(0)" class="menu-item">
+                <img src="/FN/서동성(메인)/CSS/icon-alram.svg" alt="알람 아이콘">
+                <span>알람</span>
+            </a>
+            <a href="javascript:void(0)" class="menu-item">
+                <img src="/FN/서동성(메인)/CSS/icon-make.svg" alt="만들기 아이콘">
+                <span>만들기</span>
+            </a>
+            <a href="javascript:void(0)" class="menu-item">
+                <img src="/FN/서동성(메인)/CSS/icon-profile.svg" alt="프로필 아이콘">
+                <span>프로필</span>
+            </a>
+        </nav>
+
+
+        <div class="menu-footer">
+            <a href="javascript:void(0)" class="menu-item">
+                <img src="/FN/서동성(메인)/CSS/icon-menu.svg" alt="메뉴 아이콘">
+                <span>메뉴</span>
+
+        </div>
+    </aside>
+
+    <div class="feed-container">
+        <div class="feed-story-section">
+            <div class="feed-story"></div>
+            <div class="feed-story"></div>
+            <div class="feed-story"></div>
+            <div class="feed-story"></div>
+        </div>
+
+        <div class="feed-post">
+            <div class="feed-post-header"></div>
+            <div class="feed-post-image"></div>
+            <div class="feed-post-actions"></div>
+            <div class="feed-post-caption"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

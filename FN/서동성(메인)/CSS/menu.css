@@ -1,0 +1,164 @@
+
+
+
+.menu-sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-right: 1px solid #dbdbdb;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    /* z-index: 1000; */
+    display: flex;
+    /* 추가 */
+    flex-direction: column;
+    /* 추가 */
+}
+
+.menu-logo {
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.menu-item img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+.menu-item:hover {
+    background: #f2f2f2;
+}
+
+.menu-footer {
+    border-top: 1px solid #dbdbdb;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-right: 10px;
+    margin-top: auto;
+    /* 추가: 맨 아래로 내리기 */
+}
+
+
+
+
+
+/* 반응형 메뉴바 */
+@media screen and (max-width: 800px) {
+    .menu-sidebar {
+        width: 80px;
+        padding: 20px 8px;
+    }
+
+    .menu-logo {
+        display: none;
+    }
+
+    .menu-item {
+        justify-content: center;
+    }
+
+    .menu-item span {
+        display: none;
+    }
+
+    .menu-item img {
+        margin: 0;
+    }
+
+    .menu-footer {
+        display: none;
+
+    }
+
+    .feed-container {
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menu-sidebar {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        border-right: none;
+        border-top: 1px solid #dbdbdb;
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .menu-logo {
+        display: none;
+    }
+
+    .menu-nav {
+        flex-direction: row;
+        gap: 0;
+        flex-grow: 1;
+        justify-content: space-around;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .menu-item img {
+        margin: 0;
+    }
+
+    .menu-item span {
+        display: none;
+    }
+
+    .menu-footer {
+        display: none;
+    }
+
+    .message-item,
+    .menu-more-item {
+        display: none;
+    }
+}
+
+.feed-container {
+    margin-left: 0;
+    margin-bottom: 60px;
+    /* 하단 메뉴 높이만큼 */
+}
+}

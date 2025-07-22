@@ -42,7 +42,7 @@ main{
     /* background-color: red; */
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 }
 
 .camera-box>a {
@@ -62,7 +62,7 @@ main{
     object-fit: contain;
 }
 .photo-icon-container>.nickname-container{  
-    padding-top: 100px;
+    padding-top: 70px;
     /* background-color: rgb(158, 136, 179); */
     flex: 1;
     height: 100%;
@@ -72,7 +72,7 @@ main{
 }
 
 .nickname-container>h6{
-font-size: 100%;
+    font-size: 100%;
 }
 .nickname-container>div{
     display: flex;

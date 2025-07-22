@@ -1,0 +1,27 @@
+footer{
+            /* border: 1px solid; */
+            height: 130px;
+            flex-wrap: wrap;
+            font-size: 12px;
+}
+.footer-first{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-around;
+
+}
+.footer-second{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+}
+
+.footer-second>.language{
+    padding: 7px;
+    border: none;
+}

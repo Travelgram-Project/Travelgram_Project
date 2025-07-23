@@ -46,8 +46,10 @@ main{
 }
 
 .camera-box>a {
-    width: 70%;
+    width: 80%;
+    min-width: 80%;
     height: 60%;
+    max-height: 60%;
     border-radius: 50%;
     display: flex;            
     justify-content: center;
@@ -58,8 +60,10 @@ main{
 
 .camera-box>a>img {
     width: 50%;
+    min-width: 80px;
     height: 50%;
-    object-fit: contain;
+    
+    
 }
 .photo-icon-container>.nickname-container{  
     padding-top: 70px;
@@ -113,8 +117,10 @@ main{
     /* background-color: red; */
 }
 .new-box>a>.plus-box{
-    width: 30%;
+    width: 33%;
+    min-width: 33%;
     height: 70%;
+    max-height: 70%;
     border-radius: 50%;
     background-color: gray;
     display: flex;

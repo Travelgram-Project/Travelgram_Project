@@ -1,0 +1,7 @@
+
+   /* right */
+   @media (max-width: 1000px) {
+      .right-menu {
+        display: none;
+      }
+    }

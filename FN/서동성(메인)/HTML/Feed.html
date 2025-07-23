@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed Mockup</title>
+    <link rel="stylesheet" href="feed.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Feed.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="stylesheet" href="../CSS/right-menu.css">
+
+
+
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: row;
+            /* 수정 */
+            min-height: 100vh;
+            /* 화면 전체 높이 채우기 */
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        /* 메뉴바 */
+
+     
+
+        .right-sidebar {
+            width: 320px;
+            font-size: 14px;
+            color: #8e8e8e;
+        }
+
+        .profile-section,
+        .recommend-section {
+            border: 1px solid;
+            background: #fff;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-img,
+        .recommend-user img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .recommend-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .recommend-user {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info div {
+            margin-left: 10px;
+        }
+
+        .change-btn,
+        .show-all {
+            font-weight: bold;
+            color: #0095f6;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .recommend-user button {
+            background: none;
+            border: none;
+            color: #0095f6;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footer-links {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="menu-sidebar">
+            <div class="menu-logo">Travelgram</div>
+
+            <nav class="menu-nav">
+                <a href="javascript:void(0)" class="menu-item">
+                    <img src="/FN/서동성(메인)/CSS/icon-home.svg" alt="홈 아이콘">
+                    <span>홈</span>
+                </a>
+                <a href="javascript:void(0)" class="menu-item">
+                    <img src="/FN/서동성(메인)/CSS/icon-search.svg" alt="검색 아이콘">
+                    <span>검색</span>
+                </a>
+                <a href="javascript:void(0)" class="menu-item">
+                    <img src="/FN/서동성(메인)/CSS/icon-message.svg" alt="메시지 아이콘">
+                    <span>메시지</span>
+                </a>
+                <a href="javascript:void(0)" class="menu-item">
+                    <img src="/FN/서동성(메인)/CSS/icon-alram.svg" alt="알람 아이콘">
+                    <span>알람</span>
+                </a>
+                <a href="javascript:void(0)" class="menu-item">
+                    <img src="/FN/서동성(메인)/CSS/icon-make.svg" alt="만들기 아이콘">
+                    <span>만들기</span>
+                </a>
+                <a href="javascript:void(0)" class="menu-item">
+                    <img src="/FN/서동성(메인)/CSS/icon-profile.svg" alt="프로필 아이콘">
+                    <span>프로필</span>
+                </a>
+            </nav>
+
+
+            <a href="javascript:void(0)" class="menu-item">
+                <img src="/FN/서동성(메인)/CSS/icon-menu.svg" alt="메뉴 아이콘">
+                <span>메뉴</span>
+            </a> 
+
+            </div>
+        </aside>
+    </div>
+
+
+    <div class="feed-container">
+        <div class="feed-story-section">
+            <div class="feed-story"></div>
+            <div class="feed-story"></div>
+            <div class="feed-story"></div>
+            <div class="feed-story"></div>
+        </div>
+
+        <div class="feed-post">
+            <div class="feed-post-header"></div>
+            <div class="feed-post-image"></div>
+            <div class="feed-post-actions"></div>
+            <div class="feed-post-caption"></div>
+        </div>
+    </div>
+    <aside class="right-sidebar">
+        <div class="profile-section">
+            <div class="profile-info">
+                <img src="/FN/서동성(메인)/CSS/icon-profile.svg" alt="프로필 이미지" class="profile-img">
+                <div>
+                    <strong>my_god_is_cat</strong>
+                    <p>서동성</p>
+                </div>
+                <a href="javascript:void(0)" class="change-btn">전환</a>
+            </div>
+        </div>
+
+        <div class="recommend-section">
+            <div class="recommend-header">
+                <span>회원님을 위한 추천</span>
+                <a href="javascript:void(0)" class="show-all">모두 보기</a>
+            </div>
+
+            <div class="recommend-user">
+                <div class="user-info">
+                    <img src="/FN/서동성(메인)/CSS/icon-profile.svg" alt="추천 유저">
+                    <div>
+                        <label>user_1</label>
+                        <p>회원님을 위한 추천</p>
+                    </div>
+                </div>
+                <button>팔로우</button>
+            </div>
+
+            <div class="recommend-user">
+                <div class="user-info">
+                    <img src="/FN/서동성(메인)/CSS/icon-profile.svg" alt="추천 유저">
+                    <div>
+                        <label>user_2</label>
+                        <p>회원님을 위한 추천</p>
+                    </div>
+                </div>
+                <button>팔로우</button>
+            </div>
+
+            <div class="recommend-user">
+                <div class="user-info">
+                    <img src="/FN/서동성(메인)/CSS/icon-profile.svg" alt="추천 유저">
+                    <div>
+                        <label>user_3</label>
+                        <p>회원님을 위한 추천</p>
+                    </div>
+                </div>
+                <button>팔로우</button>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            소개 ∙ 도움말 ∙ 홍보 센터 ∙ API ∙ 채용 정보 <br>
+            개인정보처리방침 ∙ 약관 ∙ 위치 ∙ 언어 ∙ Meta Verified
+            <p>© 2025 INSTAGRAM FROM META</p>
+        </div>
+    </aside>
+
+
+</body>
+
+</html>

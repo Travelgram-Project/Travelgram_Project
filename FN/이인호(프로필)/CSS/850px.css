@@ -1,14 +1,46 @@
+/* 사이드바 */
+      .menu-sidebar {
+        width: 60px;
+        padding: 20px 6px;
+        align-items: center;
+      }
+
+      .menu-logo {
+        display: none;
+      }
+
+      .menu-item {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      .menu-item img {
+        margin: 0;
+      }
+
+      .menu-item span {
+        display: none;
+      }
+
+      .menu-settings {
+        align-items: center;
+      }
 
 
-/* footer랑 main */
 
-.content-container{ 
+
+
+
+
+    /* 메인과 풋터 */
+
+  .content-container{ 
     
-    margin-left: 250px;
-
-    /* background-color: yellowgreen;  */
+    
+    /* background-color: yellowgreen; */
     display: flex;
-    width: 900px;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
@@ -20,6 +52,8 @@ main{
     padding: 20px;
     flex: 1;
     width: 100%;
+
+    /* background-color: aqua; */
 }
 .top-container{
     /* background-color: yellow; */
@@ -32,7 +66,7 @@ main{
     height: 100%;
 }
 .photo-icon-container>.camera-container{
-    /* background-color: aqua; */
+    /* background-color: rgb(27, 48, 48); */
    
     flex: 1;
     display: flex;
@@ -43,15 +77,15 @@ main{
     width: 65%;
     height: 100%;
 
-    /* background-color: red; */
+    /* background-color: rgb(182, 81, 81); */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .camera-box>a {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     display: flex;            
     justify-content: center;
@@ -61,17 +95,20 @@ main{
 }
 
 .camera-box>a>img {
-    width: 130px;  
-    height: 130px;
+    width: 50%;
+    min-width: 80px;
+    height: 50%;
+    
+    
 }
 .photo-icon-container>.nickname-container{  
-    padding-top: 90px;
+    padding-top: 120px;
     /* background-color: rgb(158, 136, 179); */
     flex: 1;
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 }
 
 .nickname-container>h6{
@@ -81,19 +118,18 @@ main{
     display: flex;
     flex-wrap: wrap;
 
-    gap: 30px;
+    gap: 15px;
 }
 .nickname-container>div>a{
     padding: 5px;
 }
 .gray-button{
-    /* 프로필 편집, 보관된 스토리 보기 버튼 */
+  /* 프로필 편집, 보관된 스토리 보기 버튼 */
     /* background-color: lightgray;  */
     border-radius: 15%; 
     font-weight: bold;
     flex-wrap: wrap;
 }
-
 
 
 .new-container{
@@ -120,11 +156,11 @@ main{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* background-color: red; */
+    /* background-color: rgb(235, 138, 138); */
 }
 .new-box>a>.plus-box{
-    width: 170px;
-    height: 170px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: gray;
     display: flex;
@@ -134,8 +170,8 @@ main{
 }
 
 .new-box>a>.plus-box>img{
-    width: 130px;
-    height: 130px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
 } 
 
@@ -146,7 +182,8 @@ main{
     border-top: 1px solid #dbdbdb;   
     /* background-color: violet; */
     height: 10vh;
-
+    margin-left: 45px;
+    width: 100%;
     display: flex;
     justify-content: center;
     
@@ -168,6 +205,7 @@ main{
     /* background-color: brown; */
     display: flex;
     flex-direction: column;
+    margin-left: 70px;
 }
 .start-container>h6{
     font-size: 15px;
@@ -188,6 +226,7 @@ main{
     align-items: center;
     padding: 10px;
     width: 50%;
+    min-width: 40%;
     margin: 0 10px;
     gap: 10px;
     /* background-color: red; */
@@ -221,3 +260,37 @@ main{
 
 
 
+
+
+/* 풋터 */
+
+
+footer{
+            /* border: 1px solid; */
+            height: 130px;
+            flex-wrap: wrap;
+            font-size: 12px;
+
+            margin-left: 50px;
+}
+.footer-first{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-around;
+
+}
+.footer-second{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+}
+
+.footer-second>.language{
+    padding: 7px;
+    border: none;
+}

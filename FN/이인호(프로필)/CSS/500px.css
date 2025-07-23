@@ -1,10 +1,63 @@
+ .menu-sidebar {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        border-top: 1px solid #dbdbdb;
+        border-right: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        z-index: 9999;
+      }
+
+      .menu-logo,
+      .menu-settings,
+      .menu-item.message,
+      .menu-item.settings,
+      .menu-item.alarm {
+        display: none;
+      }
+
+      .menu-nav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+      }
+
+      .menu-item {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .menu-item span {
+        display: none;
+      }
+
+      .menu-item img {
+        margin: 0;
+        width: 24px;
+        height: 24px;
+      }
 
 
-/* footer랑 main */
+
+
+
+
+      /* 메인과 풋터 */
 
 .content-container{ 
     
-    margin-left: 250px;
+    /* margin-left: 250px; */
 
     /* background-color: yellowgreen;  */
     display: flex;
@@ -23,7 +76,7 @@ main{
 }
 .top-container{
     /* background-color: yellow; */
-    height: 45vh;
+    height: 20vh;
 }
 
 .photo-icon-container{
@@ -40,18 +93,20 @@ main{
     align-items: center;
 }
 .camera-container>.camera-box{
-    width: 65%;
-    height: 100%;
+    width:40%;
+    height: 90%;
 
-    /* background-color: red; */
+    /* background-color: rgb(109, 44, 44); */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .camera-box>a {
-    width: 200px;
-    height: 200px;
+
+    width: 80px;
+    height: 80px;
+    
     border-radius: 50%;
     display: flex;            
     justify-content: center;
@@ -61,11 +116,14 @@ main{
 }
 
 .camera-box>a>img {
-    width: 130px;  
-    height: 130px;
+    width: 50px;
+    
+    height: 50px;
+    
+    
 }
 .photo-icon-container>.nickname-container{  
-    padding-top: 90px;
+    padding-top: 10px;
     /* background-color: rgb(158, 136, 179); */
     flex: 1;
     height: 100%;
@@ -75,29 +133,39 @@ main{
 }
 
 .nickname-container>h6{
-    font-size: 100%;
+    
+    /* display: none; */
+    font-size: 10px;
 }
 .nickname-container>div{
     display: flex;
     flex-wrap: wrap;
-
     gap: 30px;
 }
 .nickname-container>div>a{
     padding: 5px;
+    font-size: 10px;
 }
-.gray-button{
-    /* 프로필 편집, 보관된 스토리 보기 버튼 */
-    /* background-color: lightgray;  */
+.nickname-container>:nth-child(2){
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 0;
+}
+.nickname-container>div>.gray-button{
+    /* background-color: lightgray; */
+    display: inline-block;
     border-radius: 15%; 
     font-weight: bold;
     flex-wrap: wrap;
+    
+    
+    
 }
 
 
 
 .new-container{
-    height: 30vh;
+    height: 20vh;
     width: 50%;
     /* background-color: hotpink; */
 
@@ -109,34 +177,37 @@ main{
 }
 
 .new-box{
-    height: 80%;
+    height: 100%;
     width: 100%;
+    /* background-color: rgb(156, 91, 91); */
 } 
 .new-box>a{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* background-color: red; */
+    /* background-color: rgb(163, 76, 76); */
+    font-size: 13px;
+    margin-left: 10px ;
 }
 .new-box>a>.plus-box{
-    width: 170px;
-    height: 170px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 45%;
+    
 }
 
 .new-box>a>.plus-box>img{
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
+    width: 54px;
+    height: 54px;
 } 
 
 
@@ -146,7 +217,7 @@ main{
     border-top: 1px solid #dbdbdb;   
     /* background-color: violet; */
     height: 10vh;
-
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     
@@ -158,7 +229,10 @@ main{
     
     display: inline-block;
     /* background-color: rgb(138, 138, 45); */
-    margin: 15px 20px 0 20px;
+    /* margin: 15px 20px 0 20px; */
+    margin: 10 auto;
+    
+    font-size: 0;
 }
 
 
@@ -168,9 +242,11 @@ main{
     /* background-color: brown; */
     display: flex;
     flex-direction: column;
+    
+    margin: 0 auto;
 }
 .start-container>h6{
-    font-size: 15px;
+    font-size: 12px;
     
 }
 
@@ -187,9 +263,10 @@ main{
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    border: 1px solid #dbdbdb;
     width: 50%;
     margin: 0 10px;
-    gap: 10px;
+    gap: 20px;
     /* background-color: red; */
     max-width: 40%;
 }
@@ -220,4 +297,32 @@ main{
 
 
 
+/* 풋터부분 */
 
+footer{
+            display: none;
+            height: 130px;
+            flex-wrap: wrap;
+            font-size: 12px;
+}
+.footer-first{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-around;
+
+}
+.footer-second{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+}
+
+.footer-second>.language{
+    padding: 7px;
+    border: none;
+}

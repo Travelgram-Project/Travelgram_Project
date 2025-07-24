@@ -33,9 +33,9 @@
 
 
             <nav class="menu-nav">
-                <a href="#" class="menu-item home"><img src="../fromFigma_Icon_1/홈.svg" /><span class="menu-word">홈</span></a>
-                <a href="#" class="menu-item search"><img src="../fromFigma_Icon_1/검색.svg" /><span class="menu-word">검색</span></a>
-                    <div class = "search-submenu-container">
+                <a href="../main-page.html" class="menu-item home"><img src="../fromFigma_Icon_1/홈.svg" /><span class="menu-word">홈</span></a>
+                <a href="#" class="menu-item search" id="search-toggle"><img src="../fromFigma_Icon_1/검색.svg" /><span class="menu-word">검색</span></a>
+                    <div class = "search-submenu-container" id="search-submenu-container">
                         <div class = "search-bar-box">
                             <h1>검색</h1>
                             <input class = "search-bar" type="text">
@@ -194,5 +194,30 @@
         </div>
         
     </div>
+
+    <script>
+
+        const toggle = document.getElementById("search-toggle");
+        const submenu = document.getElementById("search-submenu-container");
+
+        toggle.addEventListener("click", (event) => {
+            event.stopPropagation();
+            submenu.style.display = submenu.style.display === "block?" ? "none" : "block";
+        });
+
+        document.addEventListener("click", (event) => {
+            
+            const clickInside = toggle.contains(event.target);
+            const clickSearch = submenu.contains(event.target);
+
+            if(!clickInside && !clickSearch) {
+                submenu.style.display = "none";
+            }
+        })
+
+    </script>
+
+
+
 </body>
 </html>

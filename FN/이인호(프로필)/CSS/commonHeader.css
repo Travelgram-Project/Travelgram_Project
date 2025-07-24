@@ -48,7 +48,7 @@
       /* 검색 누르면 나오는 서브메뉴 컨테이너 */
       background-color: white;
       
-      /* display: none; */
+      display: none;
 
       border-left: 1px solid #dbdbdb;
       border-right: 1px solid #dbdbdb;
@@ -175,7 +175,7 @@
       background: #f2f2f2;
     }
     
-    .menu-nav>:nth-child(2):hover .search-submenu-container{
+    .menu-nav>.menu-item.search:hover .search-submenu-container{
       display: block;
     }
    

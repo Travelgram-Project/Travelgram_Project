@@ -7,12 +7,14 @@
     /* 헤더바 위치 비우기위해서 */
     margin-left: 250px;
 
+    overflow-x: hidden;
     /* background-color: yellowgreen;  */
     display: flex;
     width: 900px;
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
+    min-width: 0;
 }
 
 main{

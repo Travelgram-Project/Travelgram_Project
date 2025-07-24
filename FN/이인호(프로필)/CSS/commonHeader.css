@@ -29,6 +29,7 @@
       font-size: 24px;
       margin-bottom: 30px;
       margin-left: 10px;
+      position: relative;
     }
 
     .menu-nav {
@@ -36,7 +37,123 @@
       flex-direction: column;
       gap: 16px;
       flex-grow: 1;
+
+      
     }
+    
+
+      
+
+    .search-submenu-container{
+      /* 검색 누르면 나오는 서브메뉴 컨테이너 */
+      background-color: white;
+      
+      /* display: none; */
+
+      border-left: 1px solid #dbdbdb;
+      border-right: 1px solid #dbdbdb;
+      
+      
+      height: 100vh;
+      width: 400px;
+
+      position: absolute;
+      left: 5px;
+      top: 0;
+
+      margin-left: 60px;
+
+      
+
+     
+
+    }
+
+    .search-bar-box{
+      /* 검색 바가 있는 박스 */
+    
+      /* background-color: rgb(237, 101, 101); */
+      
+      padding-left: 15px;
+    }
+
+    .search-bar{
+      /* 검색 바 */
+
+      background-color: gray;
+
+      border-radius: 2%;
+      border: none;
+
+      width: 365px;
+      height: 40px;
+    }
+
+    .new-search-box{
+      /* 최근 검색 항목, 모두 지우기가 있는 박스 */
+      /* background-color: violet; */
+
+      display: flex;
+      align-items: center;
+
+      margin: 10px 0;
+      padding: 0 20px;
+
+      width: 400px;
+      height: 70px;
+
+      border-top: 1px solid #dbdbdb;
+
+      justify-content: space-between;
+    }
+
+    .new-search-box>h4{
+      /* 최근 검색 항목 */
+      
+    }
+
+    .new-search-box>div{
+      /* 모두 지우기 */
+      color: rgb(25, 176, 227);
+      font-weight: bold;
+    }
+
+    .people-list-container{
+      /* 닉네임 이름 프로필 아이콘들이 있는 컨테이너 */
+      /* background-color: yellow; */
+      height: 100%;
+    }
+
+    .people-list-box{
+      /* 닉네임 이름 프로필 아이콘이 있는 박스(단위는 하나) */
+      /* background-color: aqua; */
+      
+      padding: 20px;
+
+      display: flex;
+      gap: 20px;
+      
+    }
+
+    .nikname-name{
+      /* 닉네임과 이름만 있는 박스 */
+      /* border: 1px solid; */
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      font-size: 15px;
+
+      padding: 10px;
+    }
+
+    .nikname-name>:nth-child(1){
+      font-family: 'Satisfy', cursive;
+      font-weight: bold;
+    }
+
+
 
     .menu-item {
       display: flex;
@@ -57,4 +174,16 @@
     .menu-item:hover {
       background: #f2f2f2;
     }
-      
+    
+    .menu-nav>:nth-child(2):hover .search-submenu-container{
+      display: block;
+    }
+   
+
+
+    /* drop-down */
+
+     /* 메인메뉴의 리스트에 마우스를 갖다대면 서브메뉴가 나오게 하겠다 */
+        /* .wrapper>header>nav>ul.main-menu>li:hover>.sub-menu{
+            display: block;
+        } */

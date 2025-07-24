@@ -1,0 +1,296 @@
+/* 사이드바 */
+      .menu-sidebar {
+        width: 60px;
+        padding: 20px 6px;
+        align-items: center;
+      }
+
+      .menu-logo {
+        display: none;
+      }
+
+      .menu-item {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      .menu-item img {
+        margin: 0;
+      }
+
+      .menu-item span {
+        display: none;
+      }
+
+      .menu-settings {
+        align-items: center;
+      }
+
+
+
+
+
+
+
+    /* 메인과 풋터 */
+
+  .content-container{ 
+    
+    
+    /* background-color: yellowgreen; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+main{
+    margin-bottom: 150px;
+    top: 0;
+    padding: 20px;
+    flex: 1;
+    width: 100%;
+
+    /* background-color: aqua; */
+}
+.top-container{
+    /* background-color: yellow; */
+    height: 45vh;
+}
+
+.photo-icon-container{
+    /* background-color: red; */
+    display: flex;
+    height: 100%;
+}
+.photo-icon-container>.camera-container{
+    /* background-color: rgb(27, 48, 48); */
+   
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.camera-container>.camera-box{
+    width: 65%;
+    height: 100%;
+
+    /* background-color: rgb(182, 81, 81); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera-box>a {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;            
+    justify-content: center;
+    align-items: center;
+    background-color:gray;
+    opacity: 90%;
+}
+
+.camera-box>a>img {
+    width: 50%;
+    min-width: 80px;
+    height: 50%;
+    
+    
+}
+.photo-icon-container>.nickname-container{  
+    padding-top: 120px;
+    /* background-color: rgb(158, 136, 179); */
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nickname-container>h6{
+    font-size: 100%;
+}
+.nickname-container>div{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+.nickname-container>div>a{
+    padding: 5px;
+}
+.gray-button{
+  /* 프로필 편집, 보관된 스토리 보기 버튼 */
+    /* background-color: lightgray;  */
+    border-radius: 15%; 
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+
+.new-container{
+    height: 30vh;
+    width: 50%;
+    /* background-color: hotpink; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.new-box{
+    height: 80%;
+    width: 100%;
+} 
+.new-box>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* background-color: rgb(235, 138, 138); */
+}
+.new-box>a>.plus-box{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 45%;
+}
+
+.new-box>a>.plus-box>img{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+} 
+
+
+
+
+.post-container{
+    border-top: 1px solid #dbdbdb;   
+    /* background-color: violet; */
+    height: 10vh;
+    margin-left: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.post-box{
+
+}
+.post-box>a{
+    
+    display: inline-block;
+    /* background-color: rgb(138, 138, 45); */
+    margin: 15px 20px 0 20px;
+}
+
+
+.start-container{
+    
+    height: 35vh;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+.start-container>h6{
+    font-size: 15px;
+    
+}
+
+.start-big-box{
+    display: flex;
+    margin: 0;
+    margin-top: auto;
+    
+    height: 98%;
+    /* background-color: rgb(74, 74, 87) */
+}
+.start-big-box>.start-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+    min-width: 40%;
+    margin: 0 10px;
+    gap: 10px;
+    /* background-color: red; */
+    max-width: 40%;
+}
+.start-box>img{
+    width: 35%;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 10px;
+}
+.start-box>button{
+    background-color: blue;
+    color: white;
+    border-radius: 14%;
+    padding: 7px;
+}
+.start-box>:nth-child(2){
+    font-weight: bold;
+}
+
+.start-box>:nth-child(3){
+    text-align: left;
+    max-width: 100%;
+    /* background-color: aqua; */
+    height: 20%;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/* 풋터 */
+
+
+footer{
+            /* border: 1px solid; */
+            height: 130px;
+            flex-wrap: wrap;
+            font-size: 12px;
+
+            margin-left: 50px;
+}
+.footer-first{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-around;
+
+}
+.footer-second{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+}
+
+.footer-second>.language{
+    padding: 7px;
+    border: none;
+}

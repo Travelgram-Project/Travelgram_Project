@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./CSS/반응형 1000px.css">
     <link rel="stylesheet" href="./CSS/반응형 500px.css">
     <link rel="stylesheet" href="./CSS/반응형 850px.css">
+    <script src="./JS/like-button.js" defer></script>
 
 
 
@@ -29,7 +30,9 @@
         <div class="menu-sidebar">
 
             <!--  -->
-            <a href="./main-page.html"><div class="menu-logo"> Travelgram </div> </a>
+            <a href="./main-page.html">
+                <div class="menu-logo"> Travelgram </div>
+            </a>
 
             <nav class="menu-nav">
                 <a href="./main-page.html" class="menu-item home"><img
@@ -202,32 +205,7 @@
 
     </div>
 
-    <script>
-        // 빨간 하트 구현
-        document.addEventListener("DOMContentLoaded", function () {
-            const likeButtons = document.querySelectorAll(".like-button img");
 
-            likeButtons.forEach((btn) => {
-                btn.addEventListener("click", function () {
-                    const isLiked = btn.getAttribute("src").includes("피드용 빨간 하트");
-
-                    btn.setAttribute(
-                        "src",
-                        isLiked
-                            ? "../fromFigma_Icon_1/피드용 하트.svg"
-                            : "../fromFigma_Icon_1/피드용 빨간 하트.svg"
-                    );
-                });
-            });
-        });
-        // 하트 클릭 시 좋아요 개수 증가 구현
-
-        // 하트가 클릭된다(.action-button like-button)
-        // 빨간 하트라면 .post-comments에 댓글n개에 n++ 한다. 
-        // 만약 기본 하트라면 .post-comments에 댓글n개에 1-- 감소한다.
-
-
-    </script>
 
 
 </body>

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet" />
+
 
     <link rel="stylesheet" href="./CSS/commonHeader.css">
 
@@ -30,30 +32,85 @@
 
         <div class="menu-sidebar">
             <!--  -->
-            <a href="../main-page.html"><div class="menu-logo"> Travelgram </div> </a>
+            <div class="menu-logo" id = "menu-logo-id">Travelgram</div>
 
 
             <nav class="menu-nav">
-                <a href="../main-page.html" class="menu-item home"><img src="./fromFigma_Icon/홈.svg" /><span>홈</span></a>
-                <a href="#" class="menu-item search"><img src="./fromFigma_Icon/검색.svg" /><span>검색</span></a>
-                <a href="#" class="menu-item map"><img src="./fromFigma_Icon/지도.svg" /><span>지도</span></a>
-                <a href="#" class="menu-item message"><img src="./fromFigma_Icon/메시지.svg" /><span>메시지</span></a>
-                <a href="#" class="menu-item alarm"><img src="./fromFigma_Icon/하트버튼.svg" /><span>알림</span></a>
-                <a href="#" class="menu-item make"><img src="./fromFigma_Icon/만들기.svg" /><span>만들기</span></a>
-                <a href="#" class="menu-item profile"><img src="./fromFigma_Icon/프로필.svg" /><span>프로필</span></a>
+                <a href="../main-page.html" class="menu-item home"><img src="../fromFigma_Icon_1/홈.svg" /><span class="menu-word">홈</span></a>
+                <a href="#" class="menu-item search" id="menu-item-id"><img src="../fromFigma_Icon_1/검색.svg" /><span class="menu-word">검색</span>
+                    <div class = "search-submenu-container" id="search-submenu-container-id">
+                        <div class = "search-bar-box">
+                            <h1>검색</h1>
+                            <input class = "search-bar" type="text">
+                        </div>
+                        <div>
+                            <div class = "new-search-box">
+                                <h4>최근 검색 항목</h4>
+                                <div>모두 지우기</div>
+                            </div>
+                            <div class="people-list-container">
+                                <div class="people-list-box">
+                                    <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
+                                    <div class = "nikname-name">
+                                        <span>Nickname</span>
+                                        <span>이름</span>
+                                    </div>
+                                </div>
+                                <div class="people-list-box">
+                                    <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
+                                    <div class = "nikname-name">
+                                        <span>Nickname</span>
+                                        <span>이름</span>
+                                    </div>
+                                </div>
+                                <div class="people-list-box">
+                                    <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
+                                    <div class = "nikname-name">
+                                        <span>Nickname</span>
+                                        <span>이름</span>
+                                    </div>
+                                </div>
+                            <div class="people-list-box">
+                                    <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
+                                    <div class = "nikname-name">
+                                        <span>Nickname</span>
+                                        <span>이름</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </a>
+                <a href="#" class="menu-item map"><img src="../fromFigma_Icon_1/지도.svg" /><span class="menu-word">지도</span></a>
+                <a href="#" class="menu-item message"><img src="../fromFigma_Icon_1/메시지.svg" /><span class="menu-word">메시지</span></a>
+                <a href="#" class="menu-item alarm"><img src="../fromFigma_Icon_1/하트버튼.svg" /><span class="menu-word">알림</span>
+                    <div>
+                        <h1>알림</h1>
+                        <h6>이번 달</h6>
+                        <div>
+
+                        </div>
+                    </div>
+                
+                
+                </a>
+                <a href="#" class="menu-item make"><img src="../fromFigma_Icon_1/만들기.svg" /><span class="menu-word">만들기</span></a>
+                <a href="#" class="menu-item profile"><img src="../fromFigma_Icon_1/프로필.svg" /><span class="menu-word">프로필</span></a>
 
             </nav>
 
 
             <div class="menu-settings" style="margin-top: auto;">
                 <a href="#" class="menu-item settings">
-                    <img src="./fromFigma_Icon/더보기.svg" /><span>설정</span>
+                    <img src="../fromFigma_Icon_1/더보기.svg" /><span>
+                        설정
+
+
+                    </span>
                 </a>
             </div>
-
-
-            <!-- main과 footer를 감싸고 있는 content-container -->
         </div>
+        <!-- main과 footer를 감싸고 있는 content-container -->
         <div class = "content-container">
             <main>
                 <section class = "top-container">
@@ -61,7 +118,7 @@
                         <div class = "camera-container">
                             <div class="camera-box">
                                 <a href="javascript:void(0)">
-                                    <img src="./fromFigma_Icon/프로필.svg" alt="프로필">
+                                    <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
                                 </a>    
                             </div>
                         </div>
@@ -85,7 +142,7 @@
                     <div class = "new-box">  
                         <a href="javascript:void(0)">
                             <div class = "plus-box">
-                                <img src="./신규아이콘.svg" alt="신규아이콘">
+                                <img src="../fromFigma_Icon_1/신규아이콘.svg" alt="신규아이콘">
                             </div> 
                             <div>신규</div>
                         </a>
@@ -95,13 +152,13 @@
                 <section  class = "post-container">
                         <div class = "post-box">
                             <a href="javascript:void(0)">
-                                <img src="./게시판아이콘.svg" alt="게시판">게시물
+                                <img src="../fromFigma_Icon_1/게시판아이콘.svg" alt="게시판">게시물
                             </a>
                             <a href="javascript:void(0)">
-                                <img src="./저장됨아이콘.svg" alt="저장됨">저장됨
+                                <img src="../fromFigma_Icon_1/저장됨아이콘.svg" alt="저장됨">저장됨
                             </a>
                             <a href="javascript:void(0)">
-                                <img src="./태그됨아이콘.svg" alt="태그됨">태그됨
+                                <img src="../fromFigma_Icon_1/태그됨아이콘.svg" alt="태그됨">태그됨
                             </a>
                         </div>
                 </section>
@@ -110,13 +167,13 @@
                     <h6>시작하기</h6>
                     <div class = "start-big-box">
                         <div class = "start-box">
-                            <img src="./카메라아이콘_1.svg" alt="">
+                            <img src="../fromFigma_Icon_1/카메라아이콘_1.svg" alt="">
                             <div>사진공유</div>
                             <div>사진을 공유하면 회원님의 프로필에 표시됩니다</div>
                             <button>첫 사진 공유하기</button>
                         </div>
                         <div class = "start-box">
-                            <img src="./카메라아이콘_1.svg" alt="">
+                            <img src="../fromFigma_Icon_1/카메라아이콘_1.svg" alt="">
                             <div>프로필 사진 추가</div>
                             <div>친구들이 회원님을 알아볼 수 있도록 프로필 사진을 올리세요</div>
                             <button>첫 사진 공유하기</button>
@@ -154,5 +211,71 @@
         </div>
         
     </div>
+
+    <script>
+
+        const menuItem = document.getElementById("menu-item-id");    // 검색과 검색 아이콘이 있는 박스의 아이디 위치 저장
+        const subMenu = document.getElementById("search-submenu-container-id");    // 검색 누르면 나오는 서브메뉴 위치 저장
+        const menuWord = document.querySelectorAll(".menu-word");  // 사이드바의 글자들 (홈, 검색...)
+        const menuLogo = document.getElementById("menu-logo-id");  //  Travelgram의 위치 저장
+
+        
+        // 클릭하면 검색의 서브메뉴는 뜨고 글자와 travelgram은 없어지고
+        menuItem.addEventListener("click", (event) => {
+            event.stopPropagation();
+
+            const subMenuPlay = window.getComputedStyle(subMenu).display;
+            
+            if(subMenuPlay === "none"){                 // 클릭하면 서브메뉴 나와라
+                subMenu.style.display = "block";
+            }else{
+                subMenu.style.display = "none";
+            }
+
+            const menuLogoPlay = window.getComputedStyle(menuLogo).display;
+
+            if(menuLogoPlay === "block"){               // Travelgram 로고 클릭하면 없어져라
+                menuLogo.style.display = "none";
+            }else{
+                menuLogo.style.display = "block";
+            }
+            
+            menuWord.forEach((i) => {
+                const iPlay = window.getComputedStyle(i).display;
+
+                if(iPlay === "block"){
+                    i.style.display = "none";
+                }else{
+                    i.style.display = "block";
+                }
+            })
+           
+        });
+
+        
+        document.addEventListener("click", (event) => {
+            
+            const clickInside = menuItem.contains(event.target);
+            const clickSearch = subMenu.contains(event.target);
+
+
+            if(!clickInside && !clickSearch) {  // 서브메뉴의 안을 클릭한게 아니라면 
+                subMenu.style.display = "none";     // 서브메뉴를 넣고
+                
+                menuLogo.style.display = "block";
+
+                menuWord.forEach((i) => {
+                    i.style.display = "block";
+                });
+            };
+        });
+
+
+
+
+    </script>
+
+
+
 </body>
 </html>

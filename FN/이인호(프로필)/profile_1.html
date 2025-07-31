@@ -56,7 +56,7 @@
                     <div>
                         <div class="new-search-box">
                             <h4>최근 검색 항목</h4>
-                            <div id = "delete-id">모두 지우기</div>
+                            <div id="all-delete-id"><a href="javascript:void(0)">모두 지우기</a></div>
                         </div>
                         <div class="people-list-container" id="search-history-id">
                             <!-- <div class="people-list-box">
@@ -65,6 +65,11 @@
                                     <span>Nickname</span>
                                     <span>이름</span>
                                 </div>
+                                <a class = "delete-box" href="javascript:void(0)">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </a>    
                             </div>
                             <div class="people-list-box">
                                 <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
@@ -447,11 +452,12 @@
 
         });
 
-        // 검색창에 입력하면 그 밑에 검사 기록 뜨게 하는 코드
-        window.addEventListener('DOMContentLoaded', (e) => {
+        // 검색하면 그 검색 기록을 밑에 나오게 할거야. 그리고 모두 지우기 누르면 삭제도 할거야
+        window.addEventListener('DOMContentLoaded', (e) => {    // 검색창에 입력하면 그 텍스트를 저장하는 코드
             console.log(e);
             const searchEl = document.getElementById('search-input-id');     // 검색창의 위치
             const SearchHistoryEl = document.getElementById('search-history-id');   // 검색 서브 메뉴
+            const deleteBtn = document.getElementById('all-delete-id')  // 모두 지우기 위치
 
             searchEl.addEventListener('keydown', (e) => {
                 if (e.key === "Enter") {     // 입력창에 Enter를 누르면
@@ -466,6 +472,10 @@
                 }
             })
 
+            deleteBtn.addEventListener('click', () => {     // 모두 지우기 버튼 누르면 다 삭제
+                SearchHistoryEl.innerHTML = "";
+            });
+
             // 입력받은 텍스트를 새로 만들기 위한 노드 생성
             function createNode(text) {
 
@@ -475,13 +485,32 @@
                 const niknameBoxEl = document.createElement('div'); // 닉네임과 이름 박스
                 const niknameEl = document.createElement('span');   // 닉네임 부분
                 const nameEl = document.createElement('span');  // 이름 부분
+                const aXEl = document.createElement('a');   // x를 감싸고 있는 a태그
+                const xEl = document.createElement('span');    // x 이미지 부분
 
-                historyEl.className = "people-list-container";
+                historyEl.className = "item";
                 peopleListEl.className = "people-list-box";
                 niknameBoxEl.className = "niknmae-name";
+                aXEl.className = "delete-box";
+                xEl.className = "material-symbols-outlined"
 
                 nameEl.textContent = text;        // 입력받은 text를 nameEl에 저장
-            
+                xEl.textContent = "close";      // 새로운 x노드 생성
+                aXEl.setAttribute('href','javascript:void(0)');     // 새로운 x를 감쌀 새로운 a태그의 속성부여
+
+                // aXEl.addEventListener('click', (e) => {  // x를 누르면 그 검색기록만 삭제
+                //     console.log(e.target);
+                //     historyEl.remove();
+                // })
+
+                // aEl.addEventListener('click', (e) => {
+                //     const itemEl = e.target.parentNode.parentNode.parentNode;   
+                //     // console.log(e.target.parentNode.parentNode.parentNode);
+                //     itemEl.remove();    // 삭제버튼 누르면 삭제
+                // });
+
+                aXEl.appendChild(xEl);
+                niknameBoxEl.appendChild(aXEl);
                 niknameBoxEl.appendChild(nameEl);
                 peopleListEl.appendChild(niknameBoxEl);
                 historyEl.appendChild(peopleListEl);

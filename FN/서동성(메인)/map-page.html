@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelgram-Map</title>
+    <!-- 로고 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/map-page.css">
+    <link rel="stylesheet" href="./CSS/menu.css">
+    <link rel="stylesheet" href="./CSS/반응형-1000px.css">
+    <link rel="stylesheet" href="./CSS/반응형-500px.css">
+    <link rel="stylesheet" href="./CSS/반응형-850px.css">
+    <link rel="stylesheet" href="./CSS/map-반응형-1000px.css">
+    <link rel="stylesheet" href="./CSS/map-반응형-500px.css">
+    <link rel="stylesheet" href="./CSS/map-반응형-850px.css">
+    <script src="./JS/like-button.js" defer></script>
+    <script src="./JS/map-page.js" defer></script>
+
+    <!-- 지도 -->
+
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3d467aec38c79925f7d8241e94d5ab7f"></script>
+    <script src="./JS/map-page.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <div class="menu-feed-box">
+        <!-- 헤더 -->
+        <div class="menu-sidebar">
+
+            <!--  -->
+            <a href="./main-page.html">
+                <div class="menu-logo">Travelgram</div>
+            </a>
+
+            <nav class="menu-nav">
+                <a href="./main-page.html" class="menu-item home">
+                    <img src="../fromFigma_Icon_1/홈.svg" alt=""><span>홈</span></a>
+                <a href="javascript:void(0)" class="menu-item search">
+                    <img src="../fromFigma_Icon_1/검색.svg" alt=""><span>검색</span></a>
+                <a href="javascript:void(0)" class="menu-item map">
+                    <img src="../fromFigma_Icon_1/지도.svg" alt=""><span>지도</span></a>
+                <a href="javascript:void(0)" class="menu-item message">
+                    <img src="../fromFigma_Icon_1/메시지.svg" alt=""><span>메시지</span></a>
+                <a href="javascript:void(0)" class="menu-item alarm">
+                    <img src="../fromFigma_Icon_1/하트버튼.svg" alt=""><span>알림</span></a>
+                <a href="javascript:void(0)" class="menu-item make">
+                    <img src="../fromFigma_Icon_1/만들기.svg" alt=""><span>만들기</span></a>
+                <a href="../이인호(프로필)/profile_1.html" class="menu-item profile">
+                    <img src="../fromFigma_Icon_1/프로필.svg" alt=""><span>프로필</span></a>
+            </nav>
+
+            <div class="menu-settings" style="margin-top: auto;">
+                <a href="javascript:void(0)" class="menu-item settings">
+                    <img src="../fromFigma_Icon_1/더보기.svg" alt=""><span>설정</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="map-container">
+            <div class="map" id="map"></div>
+        </div>
+
+
+        <div id="map">
+            <p style="margin-top:-12px">
+                <em class="link">
+                    <a href="/web/documentation/#MapTypeId" target="_blank">지도 타입을 보시려면 여기를 클릭하세요!</a>
+                </em>
+            </p>
+        </div>
+        <div class="map-footer">
+            <p class="map-types">
+                <input type="checkbox" id="chkTerrain" onclick="setOverlayMapTypeId()" /> 지형정보 보기
+                <input type="checkbox" id="chkTraffic" onclick="setOverlayMapTypeId()" /> 교통정보 보기
+                <input type="checkbox" id="chkBicycle" onclick="setOverlayMapTypeId()" /> 자전거도로 정보 보기
+            </p>
+
+        </div>
+        <div class="map_wrap">
+            <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+
+            <div id="menu_wrap" class="bg_white">
+                <div class="option">
+                    <div>
+                        <form onsubmit="searchPlaces(); return false;">
+                            키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15">
+                            <button type="submit">검색하기</button>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <ul id="placesList"></ul>
+                <div id="pagination"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

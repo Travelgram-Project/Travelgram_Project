@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const likesText = post.querySelector(".post-footer .likes");
 
         likeButton.addEventListener("click", function () {
-            const isLiked = likeButton.getAttribute("src").includes("피드용 빨간 하트");
+            const isLiked = likeButton.getAttribute("src").includes("피드용-빨간하트");
 
             // 토글 이미지
             likeButton.setAttribute(
                 "src",
                 isLiked
-                    ? "../fromFigma_Icon_1/피드용 하트.svg"
-                    : "../fromFigma_Icon_1/피드용 빨간 하트.svg"
+                    ? "../fromFigma_Icon_1/피드용-하트.svg"
+                    : "../fromFigma_Icon_1/피드용-빨간하트.svg"
             );
 
             // 좋아요 숫자 업데이트

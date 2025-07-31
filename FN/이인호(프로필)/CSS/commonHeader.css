@@ -80,10 +80,6 @@
 
        margin-left: 60px;
 
-
-
-
-
      }
 
      .search-bar-box {
@@ -139,7 +135,7 @@
       /* 알림 누르면 나올 서브메뉴 */
        background-color: white;
 
-       /* display: none; */
+       display: none;
 
        border-left: 1px solid #dbdbdb;
        border-right: 1px solid #dbdbdb;
@@ -232,6 +228,10 @@
        padding: 10px;
      }
 
+     .nikcame-name>.material-symbols-outlined{
+      
+     }
+
      .nikname-name>:nth-child(1) {
        font-family: 'Satisfy', cursive;
        font-weight: bold;
@@ -263,10 +263,70 @@
        display: block;
      }
 
-     .hidden{
-      /* toggle용 */
+     .menu-settings{
+      /* 더 보기  */
+      position: relative;
+
+      margin-top: auto;
+      
+    }
+
+      .settings-sub{
+      /* 더 보기 누르면 나오는 서브메뉴 */
+      background-color: white;
+      border: 1px solid;
+
+      position: absolute;
+      top: -510px;
+      left: 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
       display: none;
+      flex-direction: column;
+      justify-content: space-evenly;
+      
+      padding: 10px;
+
+      width: 266px;
+      height: 500px;
      }
+
+     .settings-sub.show{
+      /* 더 보기 누르면 나오는 서브메뉴 */
+      background-color: white;
+      border: 1px solid;
+
+      position: absolute;
+      top: -410px;
+      left: 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      
+      padding: 0 20px;
+
+      width: 266px;
+      height: 400px;
+     }
+
+     .settings-sub>.settings-sub-box{
+      /* 서브메뉴 안의 글자와 아이콘들 */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* border: 1px solid; */
+     }
+
+     .settings-sub>:nth-child(5){
+      padding-bottom: 30px;
+      border-bottom: 5px solid rgb(179, 178, 178);
+     }
+  
+     
 
 
      /* drop-down */

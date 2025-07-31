@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- 구글 아이콘 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet" />
 
 
@@ -35,27 +39,27 @@
         <div class="menu-sidebar">
             <!--  -->
             <a href="../서동성(메인)/main-page.html">
-                <div class="menu-logo" id = "menu-logo-id"> Travelgram </div>
+                <div class="menu-logo" id="menu-logo-id"> Travelgram </div>
             </a>
 
 
             <nav class="menu-nav">
                 <a href="../서동성(메인)/main-page.html" class="menu-item home"><img src="../fromFigma_Icon_1/홈.svg" /><span
-                        class="menu-word" >홈</span></a>
+                        class="menu-word">홈</span></a>
                 <a href="#" class="menu-item search" id="search-toggle"><img src="../fromFigma_Icon_1/검색.svg" /><span
-                        class="menu-word" >검색</span></a>
+                        class="menu-word">검색</span></a>
                 <div class="search-submenu-container" id="search-submenu-container">
                     <div class="search-bar-box">
                         <h1>검색</h1>
-                        <input class="search-bar" type="text">
+                        <input class="search-bar" type="text" id="search-input-id">
                     </div>
                     <div>
                         <div class="new-search-box">
                             <h4>최근 검색 항목</h4>
-                            <div>모두 지우기</div>
+                            <div id = "delete-id">모두 지우기</div>
                         </div>
-                        <div class="people-list-container">
-                            <div class="people-list-box">
+                        <div class="people-list-container" id="search-history-id">
+                            <!-- <div class="people-list-box">
                                 <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
                                 <div class="nikname-name">
                                     <span>Nickname</span>
@@ -82,7 +86,7 @@
                                     <span>Nickname</span>
                                     <span>이름</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -91,10 +95,10 @@
                         class="menu-word">지도</span></a>
                 <a href="#" class="menu-item message"><img src="../fromFigma_Icon_1/메시지.svg" /><span
                         class="menu-word">메시지</span></a>
-                <a href="#" class="menu-item alarm" id = "alarm-toggle"><img src="../fromFigma_Icon_1/하트버튼.svg" /><span
+                <a href="#" class="menu-item alarm" id="alarm-toggle"><img src="../fromFigma_Icon_1/하트버튼.svg" /><span
                         class="menu-word">알림</span></a>
 
-                <div class="alarm-submenu-container hidden" id="alarm-submenu-container">
+                <div class="alarm-submenu-container" id="alarm-submenu-container">
                     <div>
                         <div class="new-alarm-box">
                             <h4>알림</h4>
@@ -105,9 +109,9 @@
                                 <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
                                 <div class="alarm-nickname">
                                     <span>
-                                    <span>Nickname</span>
-                                    님이 회원님을 팔로우하기 시작했습니다. 
-                                    <span>날짜</span>
+                                        <span>Nickname</span>
+                                        님이 회원님을 팔로우하기 시작했습니다.
+                                        <span>날짜</span>
                                     </span>
                                 </div>
                                 <button>팔로잉</button>
@@ -116,9 +120,9 @@
                                 <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
                                 <div class="alarm-nickname">
                                     <span>
-                                    <span>Nickname</span>
-                                    님이 회원님을 팔로우하기 시작했습니다. 
-                                    <span>날짜</span>
+                                        <span>Nickname</span>
+                                        님이 회원님을 팔로우하기 시작했습니다.
+                                        <span>날짜</span>
                                     </span>
                                 </div>
                                 <button>팔로잉</button>
@@ -127,9 +131,9 @@
                                 <img src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
                                 <div class="alarm-nickname">
                                     <span>
-                                    <span>Nickname</span>
-                                    님이 회원님을 팔로우하기 시작했습니다. 
-                                    <span>날짜</span>
+                                        <span>Nickname</span>
+                                        님이 회원님을 팔로우하기 시작했습니다.
+                                        <span>날짜</span>
                                     </span>
                                 </div>
                                 <button>팔로잉</button>
@@ -149,8 +153,37 @@
 
 
             <div class="menu-settings" style="margin-top: auto;">
-                <a href="#" class="menu-item settings">
-                    <img src="../fromFigma_Icon_1/더보기.svg" /><span class="menu-word">설정</span>
+                <div class="settings-sub" id="settings-sub-id">
+                    <div class="settings-sub-box">
+                        <span class="material-symbols-outlined">
+                            brightness_5
+                        </span>설정
+                    </div>
+                    <div class="settings-sub-box">
+                        <span class="material-symbols-outlined">
+                            timeline
+                        </span>내 활동
+                    </div>
+                    <div class="settings-sub-box">
+                        <span class="material-symbols-outlined">
+                            archive
+                        </span>저장됨
+                    </div>
+                    <div class="settings-sub-box">
+                        <span class="material-symbols-outlined">
+                            light_mode
+                        </span>모드 전환
+                    </div>
+                    <div class="settings-sub-box">
+                        <span class="material-symbols-outlined">
+                            person_alert
+                        </span>문제 신고
+                    </div>
+                    <div class="settings-sub-box">계정 전환</div>
+                    <div class="settings-sub-box">로그 아웃</div>
+                </div>
+                <a href="#" class="menu-item settings" id="settings-id">
+                    <img src="../fromFigma_Icon_1/더보기.svg" /><span class="menu-word">더 보기</span>
                 </a>
             </div>
         </div>
@@ -261,15 +294,15 @@
         // 검색 누르면 나오는 이벤트들
         const subMenu = document.getElementById("search-submenu-container");    // 검색 누르면 나오는 서브메뉴 위치 저장
         const menuItem = document.getElementById("search-toggle");    // 검색과 검색 아이콘이 있는 박스의 아이디 위치 저장
-           
+
         const menuWord = document.querySelectorAll(".menu-word");  // 사이드바의 글자들 (홈, 검색...)
         const menuLogo = document.getElementById("menu-logo-id");  //  Travelgram의 위치 저장
-        
+
 
 
         // 클릭하면 검색의 서브메뉴는 뜨고 글자와 travelgram은 없어지고
-        menuItem.addEventListener("click", (event) => {
-            event.stopPropagation();
+        menuItem.addEventListener("click", (e) => {
+            e.stopPropagation();
 
             const subMenuPlay = window.getComputedStyle(subMenu).display;
 
@@ -303,60 +336,169 @@
         const menuItemAlarm = document.getElementById("alarm-toggle");  // 알림과 알림 아이콘이 있는 박스
         const subMenuAlarm = document.getElementById("alarm-submenu-container");    // 알림 누르면 나오게 할 서브 메뉴
 
-        menuItemAlarm.addEventListener("click", (event) => {
-            event.stopPropagation();
-            event.preventDefault();
 
-            // const subMenuAlarmPlay = window.getComputedStyle(subMenuAlarm).display;
 
-            subMenuAlarm.classList.toggle("hidden");
+        menuItemAlarm.addEventListener("click", (e) => {
+            e.stopPropagation();
+            e.preventDefault();
 
-            menuLogo.classList.toggle("hidden");
+            const subMenuAlarmPlay = window.getComputedStyle(subMenuAlarm).display;
+
+            if (subMenuAlarmPlay === "none") {
+                subMenuAlarm.style.display = "block";
+            } else {
+                subMenuAlarm.style.display = "none";
+            }
+
+            const menuLogoPlay = window.getComputedStyle(menuLogo).display;
+
+            if (menuLogoPlay === "block") {               // Travelgram 로고 클릭하면 없어져라
+                menuLogo.style.display = "none";
+            } else {
+                menuLogo.style.display = "block";
+            }
 
             menuWord.forEach((i) => {
-                i.classList.toggle("hidden");
-            });
+                const iPlay = window.getComputedStyle(i).display;
+
+                if (iPlay === "block") {
+                    i.style.display = "none";
+                } else {
+                    i.style.display = "block";
+                }
+            })
+
+
         });
 
-        
+
+        // 더 보기를 클릭하면 서브 메뉴 띄우기
+
+        const settingsSub = document.getElementById("settings-sub-id"); // 더 보기 누르면 나올 서브 메뉴
+        const settings = document.getElementById("settings-id")  // 더보기 
+
+        settings.addEventListener("click", (e) => {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            const settingsSubPlay = window.getComputedStyle(settingsSub).display;
+
+            if (settingsSubPlay === "none") {
+                settingsSub.classList.add("show");
+            } else {
+                settingsSub.classList.remove("show");
+            }
+
+            // const menuLogoPlay = window.getComputedStyle(menuLogo).display;
+
+            // if (menuLogoPlay === "block") {               // Travelgram 로고 클릭하면 없어져라
+            //     menuLogo.style.display = "none";
+            // } else {
+            //     menuLogo.style.display = "block";
+            // }
+
+            // menuWord.forEach((i) => {
+            //     const iPlay = window.getComputedStyle(i).display;
+
+            //     if (iPlay === "block") {
+            //         i.style.display = "none";
+            //     } else {
+            //         i.style.display = "block";
+            //     }
+            // });
+
+        });
+
+        document.addEventListener("click", (e) => {
+
+            const clickInside = menuItem.contains(e.target);    // 검색칸 클릭
+            const clickSearch = subMenu.contains(e.target);     // 검색 서브메뉴 클릭
 
 
-        // 검색창의 서브메뉴 정리
-        document.addEventListener("click", (event) => {
+            const clickInsideAlarm = menuItemAlarm.contains(e.target);  // 알림칸 클릭
+            const clickAlarm = subMenuAlarm.contains(e.target);         // 알림 서브메뉴 클릭
 
-            const clickInside = menuItem.contains(event.target);
-            const clickSearch = subMenu.contains(event.target);
-            
+            const clickInsideSettings = settingsSub.contains(e.target);
+            const clickSettings = settings.contains(e.target);
 
-            if (!clickInside && !clickSearch) {  // 서브메뉴의 안을 클릭한게 아니라면 
-                subMenu.style.display = "none";     // 서브메뉴를 넣고
+            const isSerachArea = clickInside || clickSearch;
+            const isAlarmArea = clickInsideAlarm || clickAlarm;
+            const isSettingsArea = clickSettings || clickInsideSettings;
 
+            if (!isSerachArea) {
+                subMenu.style.display = "none";
+            }
+
+            if (!isAlarmArea) {
+                subMenuAlarm.style.display = "none";
+            }
+
+            if (!isSettingsArea) {
+                settingsSub.classList.remove("show");
+            }
+
+            if (!isAlarmArea && !isSerachArea) {
                 menuLogo.style.display = "block";
-
                 menuWord.forEach((i) => {
                     i.style.display = "block";
                 });
-            };
-        });
-
-        // 알림창의 서브메뉴 정리
-        document.addEventListener("click", (e) => {
-
-            const clickInsideAlarm = menuItemAlarm.contains(event.target);
-            const clickAlarm = subMenuAlarm.contains(event.target);
-
-            if (!clickInsideAlarm && ! clickAlarm){
-                subMenuAlarm.classList.add("hidden");
-                menuLogo.classList.remove("hidden");
-
-                menuWord.forEach((i) => {
-                    i.classList.remove("hidden");
-                });
             }
- 
+
         });
 
-        
+        // 검색창에 입력하면 그 밑에 검사 기록 뜨게 하는 코드
+        window.addEventListener('DOMContentLoaded', (e) => {
+            console.log(e);
+            const searchEl = document.getElementById('search-input-id');     // 검색창의 위치
+            const SearchHistoryEl = document.getElementById('search-history-id');   // 검색 서브 메뉴
+
+            searchEl.addEventListener('keydown', (e) => {
+                if (e.key === "Enter") {     // 입력창에 Enter를 누르면
+                    const text = searchEl.value.trim();
+
+                    if (!isvalid(text)) {         // 유효성 검사  텍스트가 비워있다면 return
+                        return;
+                    }
+
+                    createNode(text);   // 검색창에 입력된 텍스트의 노드 생성
+                    searchEl.value = "";    // 엔터누르면 다시 비워줘야지
+                }
+            })
+
+            // 입력받은 텍스트를 새로 만들기 위한 노드 생성
+            function createNode(text) {
+
+                const historyEl = document.createElement('div');    // 검색기록의 전체 컨테이너
+                const peopleListEl = document.createElement('div'); // 검색기록 리스트들
+                const imgEl = document.createElement('img');    // 프로필 사진
+                const niknameBoxEl = document.createElement('div'); // 닉네임과 이름 박스
+                const niknameEl = document.createElement('span');   // 닉네임 부분
+                const nameEl = document.createElement('span');  // 이름 부분
+
+                historyEl.className = "people-list-container";
+                peopleListEl.className = "people-list-box";
+                niknameBoxEl.className = "niknmae-name";
+
+                nameEl.textContent = text;        // 입력받은 text를 nameEl에 저장
+            
+                niknameBoxEl.appendChild(nameEl);
+                peopleListEl.appendChild(niknameBoxEl);
+                historyEl.appendChild(peopleListEl);
+                SearchHistoryEl.appendChild(historyEl);
+            }
+
+        });
+
+        function isvalid(text) {
+            // 공백여부 확인
+            if (text.trim() === '' || text.trim() === null) {        // .trim은 앞 뒤 공백을 제거하는 함수
+                alert("내용을 입력하세요");
+                return false;
+            }
+            return true;
+        }
+
 
 
 

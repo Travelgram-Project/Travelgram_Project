@@ -226,11 +226,11 @@ main{
 
 }
 .post-box>a{
-    
     display: inline-block;
     /* background-color: rgb(138, 138, 45); */
     /* margin: 15px 20px 0 20px; */
-    margin: 10 auto;
+    
+    margin: 10px auto;
     
     font-size: 0;
 }

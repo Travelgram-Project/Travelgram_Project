@@ -38,15 +38,15 @@
 
         <div class="menu-sidebar">
             <!--  -->
-            <a href="../서동성(메인)/main-page.html">
+            <a href="../main-page.html">
                 <div class="menu-logo" id="menu-logo-id"> Travelgram </div>
             </a>
 
 
             <nav class="menu-nav">
-                <a href="../서동성(메인)/main-page.html" class="menu-item home"><img src="../fromFigma_Icon_1/홈.svg" /><span
+                <a href="../main-page.html" class="menu-item home"><img src="../fromFigma_Icon_1/홈.svg" alt = "홈 아이콘" /><span
                         class="menu-word">홈</span></a>
-                <a href="#" class="menu-item search" id="search-toggle"><img src="../fromFigma_Icon_1/검색.svg" /><span
+                <a href="#" class="menu-item search" id="search-toggle"><img src="../fromFigma_Icon_1/검색.svg" alt = "검색 아이콘"/><span
                         class="menu-word">검색</span></a>
                 <div class="search-submenu-container" id="search-submenu-container">
                     <div class="search-bar-box">
@@ -149,7 +149,7 @@
 
 
 
-                <a href="#" class="menu-item make"><img src="../fromFigma_Icon_1/만들기.svg" /><span
+                <a href="../박준형(업로드)/UPLOAD.html" class="menu-item make"><img src="../fromFigma_Icon_1/만들기.svg" /><span
                         class="menu-word">만들기</span></a>
                 <a href="#" class="menu-item profile"><img src="../fromFigma_Icon_1/프로필.svg" /><span
                         class="menu-word">프로필</span></a>
@@ -418,7 +418,7 @@
         document.addEventListener("click", (e) => {
 
             const clickInside = menuItem.contains(e.target);    // 검색칸 클릭
-            const clickSearch = subMenu.contains(e.target);     // 검색 서브메뉴 클릭
+            const clickSearch = subMenu.contains(e.target)|| submenu.contains(e.target.closet(".delete-box"));     // 검색 서브메뉴 클릭
 
 
             const clickInsideAlarm = menuItemAlarm.contains(e.target);  // 알림칸 클릭
@@ -476,7 +476,7 @@
                 SearchHistoryEl.innerHTML = "";
             });
 
-            // 입력받은 텍스트를 새로 만들기 위한 노드 생성
+            // 입력받은 텍스트를 새로 만들기 위한 노드 생성과 붙이기
             function createNode(text) {
 
                 const historyEl = document.createElement('div');    // 검색기록의 전체 컨테이너
@@ -498,10 +498,13 @@
                 xEl.textContent = "close";      // 새로운 x노드 생성
                 aXEl.setAttribute('href','javascript:void(0)');     // 새로운 x를 감쌀 새로운 a태그의 속성부여
 
-                // aXEl.addEventListener('click', (e) => {  // x를 누르면 그 검색기록만 삭제
-                //     console.log(e.target);
-                //     historyEl.remove();
-                // })
+                aXEl.addEventListener('click', (e) => {  // x를 누르면 그 검색기록만 삭제
+                    // console.log(e.target);
+                    e.stopPropagation();
+                    historyEl.remove();
+                });
+
+
 
                 // aEl.addEventListener('click', (e) => {
                 //     const itemEl = e.target.parentNode.parentNode.parentNode;   

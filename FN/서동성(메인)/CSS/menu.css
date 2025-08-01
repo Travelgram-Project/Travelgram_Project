@@ -1,0 +1,56 @@
+    /* 메인메뉴 틀 생성 */
+    .menu-sidebar {
+        position: fixed;
+        width: 220px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #fff;
+        border-right: 1px solid #dbdbdb;
+        padding: 20px 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 메인메뉴의 로고 설정 */
+    .menu-logo {
+        font-family: 'Satisfy', cursive;
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
+
+    /* 메뉴 정렬 */
+    .menu-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex-grow: 1;
+    }
+
+    /* 메뉴 각 요소의 설정 */
+    .menu-item {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #000;
+        padding: 8px;
+        border-radius: 8px;
+        transition: background 0.2s;
+    }
+
+    /* 메뉴 아이콘 설정 */
+    .menu-item img {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+    }
+
+    /* 메뉴 마우스 호버 설정 */
+    .menu-item:hover {
+        background: #f2f2f2;
+    }
+
+
+    

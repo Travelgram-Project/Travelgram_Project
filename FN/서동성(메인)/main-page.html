@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelgram</title>
+    <!-- 로고 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/Feed.css">
+    <link rel="stylesheet" href="./CSS/menu.css">
+    <link rel="stylesheet" href="./CSS/right-menu.css">
+    <link rel="stylesheet" href="./CSS/반응형-1000px.css">
+    <link rel="stylesheet" href="./CSS/반응형-500px.css">
+    <link rel="stylesheet" href="./CSS/반응형-850px.css">
+    <script src="./JS/like-button.js" defer></script>
+    <script src="./JS/menu-button-event.js" defer></script>
+
+
+
+
+</head>
+
+<body>
+
+
+    <div class="menu-feed-box">
+        <!-- 헤더 -->
+        <div class="menu-sidebar">
+
+            <!--  -->
+            <a href="./main-page.html">
+                <div class="menu-logo">Travelgram</div>
+            </a>
+
+            <nav class="menu-nav">
+                <a href="./main-page.html" class="menu-item home">
+                    <img src="../fromFigma_Icon_1/홈.svg" alt=""><span>홈</span></a>
+                <a href="javascript:void(0)" class="menu-item search">
+                    <img src="../fromFigma_Icon_1/검색.svg" alt=""><span>검색</span></a>
+                <a href="javascript:void(0)" class="menu-item map">
+                    <img src="../fromFigma_Icon_1/지도.svg" alt=""><span>지도</span></a>
+                <a href="javascript:void(0)" class="menu-item message">
+                    <img src="../fromFigma_Icon_1/메시지.svg" alt=""><span>메시지</span></a>
+                <a href="javascript:void(0)" class="menu-item alarm">
+                    <img src="../fromFigma_Icon_1/하트버튼.svg" alt=""><span>알림</span></a>
+                <a href="../박준형(업로드)/UPLOAD.html?reload=true" class="menu-item make">
+                    <img src="../fromFigma_Icon_1/만들기.svg" alt=""><span>만들기</span></a>
+                <a href="../이인호(프로필)/profile_1.html" class="menu-item profile">
+                    <img src="../fromFigma_Icon_1/프로필.svg" alt=""><span>프로필</span></a>
+            </nav>
+
+            <div class="menu-settings" style="margin-top: auto;">
+                <a href="javascript:void(0)" class="menu-item settings">
+                    <img src="../fromFigma_Icon_1/더보기.svg" alt=""><span>설정</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="main-content">
+            <div class="feed-container">
+
+                <!-- 스토리 섹션 -->
+                <div class="story-container">
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_1">
+                        <span>user_1</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_2">
+                        <span>user_2</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_3">
+                        <span>user_3</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_4">
+                        <span>user_4</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_5">
+                        <span>user_5</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_6">
+                        <span>user_6</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_7">
+                        <span>user_7</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_8">
+                        <span>user_8</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_9">
+                        <span>user_9</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="user_10">
+                        <span>user_10</span>
+                    </div>
+                </div>
+
+                <!-- 포스트 섹션 -->
+                <div class="post">
+                    <div class="post-header">
+                        <img class="profile" src="../fromFigma_Icon_1/프로필.svg" alt="프로필">
+                        <div>
+                            <div class="username">team_travelgram</div>
+                            <div class="time">South_Korea</div>
+                        </div>
+                    </div>
+
+                    <div class="post-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://cdn.pixabay.com/video/2019/09/05/26571-358053425_large.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!-- post-actions 부분 -->
+                    <div class="post-actions">
+                        <button class="action-button like-button" aria-label="좋아요">
+                            <img src="../fromFigma_Icon_1/피드용-하트.svg" alt="좋아요 아이콘">
+                        </button>
+                        <button class="action-button" aria-label="댓글">
+                            <img src="../fromFigma_Icon_1/피드용-댓글.svg" alt="댓글 아이콘">
+                        </button>
+                        <button class="action-button" aria-label="공유">
+                            <img src="../fromFigma_Icon_1/피드용-공유.svg" alt="공유 아이콘">
+                        </button>
+                    </div>
+
+                    <div class="post-footer">
+                        <div class="likes">좋아요 0개</div>
+                        <div class="caption"><strong>team_travelgram</strong> 한국 여행😍</div>
+                    </div>
+
+                    <div class="post-comments">댓글 0개 모두 보기</div>
+
+                    <div class="comment-input">
+                        <input type="text" placeholder="댓글 달기...">
+                        <button>게시</button>
+                    </div>
+                </div>
+                <div class="feed-bottom-spacing"></div>
+            </div>
+            <!-- 오른쪽 친구 섹션 -->
+            <div class="right-menu">
+                <div class="user-info">
+                    <img class="profile" src="../fromFigma_Icon_1/프로필.svg" alt="내 프로필">
+                    <div class="user-details">
+                        <div class="username">team_travelgram</div>
+                        <div class="name">팀 트래블그램</div>
+                    </div>
+                    <button class="switch">전환</button>
+                </div>
+
+                <div class="suggestions-header">
+                    회원님을 위한 추천
+                    <a href="#">모두 보기</a>
+                </div>
+
+                <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="친구1">
+                        <div class="suggestion-details">
+                            <div class="username">other_user_1</div>
+                            <div class="info">추천 회원</div>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="../fromFigma_Icon_1/프로필.svg" alt="친구2">
+                        <div class="suggestion-details">
+                            <div class="username">other_user_2</div>
+                            <div class="info">추천 회원</div>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </div>
+                </div>
+                <div class="right-footer">
+                    <ul class="footer-links">
+                        <li><a href="javascript:void(0)">소개</a></li>
+                        <li><a href="javascript:void(0)">도움말</a></li>
+                        <li><a href="javascript:void(0)">홍보 센터</a></li>
+                        <li><a href="javascript:void(0)">API</a></li>
+                        <li><a href="javascript:void(0)">채용 정보</a></li>
+                        <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                        <li><a href="javascript:void(0)">약관</a></li>
+                        <li><a href="javascript:void(0)">위치</a></li>
+                        <li><a href="javascript:void(0)">언어</a></li>
+                        <li><a href="javascript:void(0)">Meta Verified</a></li>
+                    </ul>
+                    <p class="copyright">© 2025 INSTAGRAM FROM META</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

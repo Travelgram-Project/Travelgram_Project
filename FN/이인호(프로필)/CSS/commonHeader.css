@@ -1,182 +1,362 @@
-     *{box-sizing: border-box;}
-        a{color: black; text-decoration: none;}
-        ul{padding: 0; margin: 0; list-style: none;}
-        body{padding: 0; margin: 0; height: 100%;}
-      
-        .wrapper {
-            display: flex;
-            min-height: 100vh;      
-            
-                            
-        }
-      .menu-sidebar {
-      position: fixed;
-      z-index: 1;
-      width: 220px;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      background: #fff;
-      border-right: 1px solid #dbdbdb;
-      padding: 20px 12px;
-      display: flex;
-      flex-direction: column;
-    }
+     * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       font-family: Arial, sans-serif;
+     }
 
-    .menu-logo {
-      font-family: 'Satisfy', cursive;
-      font-weight: bold;
-      font-size: 24px;
-      margin-bottom: 30px;
-      margin-left: 10px;
-      position: relative;
-      
-    }
+     a {
+       color: black;
+       text-decoration: none;
+     }
 
-    .menu-nav {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      flex-grow: 1;
+     ul {
+       padding: 0;
+       margin: 0;
+       list-style: none;
+     }
 
-      
-    }
-    
+     body {
+       padding: 0;
+       margin: 0;
+       height: 100%;
+     }
 
-      
+     .wrapper {
+       display: flex;
+       min-height: 100vh;
 
-    .search-submenu-container{
-      /* 검색 누르면 나오는 서브메뉴 컨테이너 */
-      background-color: white;
-      
-      display: none;
 
-      border-left: 1px solid #dbdbdb;
-      border-right: 1px solid #dbdbdb;
-      
-      
-      height: 100vh;
-      width: 400px;
+     }
 
-      position: absolute;
-      left: 5px;
-      top: 0;
+     .menu-sidebar {
+       position: fixed;
+       z-index: 1;
+       width: 220px;
+       height: 100vh;
+       top: 0;
+       left: 0;
+       background: #fff;
+       border-right: 1px solid #dbdbdb;
+       padding: 20px 12px;
+       display: flex;
+       flex-direction: column;
+     }
 
-      margin-left: 60px;
+     .menu-logo {
+       font-family: 'Satisfy', cursive;
+       font-weight: bold;
+       font-size: 24px;
+       margin-bottom: 30px;
+       margin-left: 10px;
+       position: relative;
+     }
 
-      
+     .menu-nav {
+       display: flex;
+       flex-direction: column;
+       gap: 16px;
+       flex-grow: 1;
 
-     
 
-    }
-
-    .search-bar-box{
-      /* 검색 바가 있는 박스 */
-    
-      /* background-color: rgb(237, 101, 101); */
-      
-      padding-left: 15px;
-    }
-
-    .search-bar{
-      /* 검색 바 */
-
-      background-color: gray;
-
-      border-radius: 2%;
-      border: none;
-
-      width: 365px;
-      height: 40px;
-    }
-
-    .new-search-box{
-      /* 최근 검색 항목, 모두 지우기가 있는 박스 */
-      /* background-color: violet; */
-
-      display: flex;
-      align-items: center;
-
-      margin: 10px 0;
-      padding: 0 20px;
-
-      width: 400px;
-      height: 70px;
-
-      border-top: 1px solid #dbdbdb;
-
-      justify-content: space-between;
-    }
-
-    .new-search-box>h4{
-      /* 최근 검색 항목 */
-      
-    }
-
-    .new-search-box>div{
-      /* 모두 지우기 */
-      color: rgb(25, 176, 227);
-      font-weight: bold;
-    }
-
-    .people-list-container{
-      /* 닉네임 이름 프로필 아이콘들이 있는 컨테이너 */
-      /* background-color: yellow; */
-      height: 100%;
-    }
-
-    .people-list-box{
-      /* 닉네임 이름 프로필 아이콘이 있는 박스(단위는 하나) */
-      /* background-color: aqua; */
-      /* border: 1px solid; */
-
-      padding: 20px;
-
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      
-    }
-
-    .nikname-name{
-      /* 닉네임과 이름만 있는 박스 */
-      /* border: 1px solid; */
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      font-size: 15px;
-
-      padding: 10px;
-    }
-
-    .nikname-name>:nth-child(1){
-      font-family: 'Satisfy', cursive;
-      font-weight: bold;
-    }
+     }
 
 
 
-    .menu-item {
-      display: flex;
-      align-items: center;
-      font-size: 16px;
-      color: #000;
-      padding: 8px;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
 
-    .menu-item img {
-      width: 22px;
-      height: 22px;
-      margin-right: 10px;
-    }
+     .search-submenu-container {
+       /* 검색 누르면 나오는 서브메뉴 컨테이너 */
+       background-color: white;
 
-    .menu-item:hover {
-      background: #f2f2f2;
-    }
-    
- 
+       display: none;
 
+       border-left: 1px solid #dbdbdb;
+       border-right: 1px solid #dbdbdb;
+
+
+       height: 100vh;
+       width: 400px;
+
+       position: absolute;
+       left: 5px;
+       top: 0;
+
+       margin-left: 60px;
+
+     }
+
+     .search-bar-box {
+       /* 검색 바가 있는 박스 */
+
+       /* background-color: rgb(237, 101, 101); */
+
+       padding-left: 15px;
+     }
+
+     .search-bar {
+       /* 검색 바 */
+
+       background-color: gray;
+
+       border-radius: 2%;
+       border: none;
+
+       width: 365px;
+       height: 40px;
+     }
+
+     .new-search-box {
+       /* 최근 검색 항목, 모두 지우기가 있는 박스 */
+       /* background-color: violet; */
+
+       display: flex;
+       align-items: center;
+
+       margin: 10px 0;
+       padding: 0 20px;
+
+       width: 400px;
+       height: 70px;
+
+       border-top: 1px solid #dbdbdb;
+
+       justify-content: space-between;
+     }
+
+     .new-search-box>h4 {
+       /* 최근 검색 항목 */
+
+     }
+
+     .new-search-box>div>a {
+       /* 모두 지우기 */
+       color: rgb(25, 176, 227);
+       font-weight: bold;
+     }
+
+     .alarm-submenu-container {
+       /* 알림 누르면 나올 서브메뉴 */
+       background-color: white;
+
+       display: none;
+
+       border-left: 1px solid #dbdbdb;
+       border-right: 1px solid #dbdbdb;
+
+
+       height: 100vh;
+       width: 400px;
+
+       position: absolute;
+       left: 5px;
+       top: 0;
+
+       margin-left: 60px;
+     }
+
+     .new-alarm-box {
+
+       padding-left: 15px;
+
+     }
+
+     .alarm-nickname {
+       /* ~님이 회원님을 팔로우 했습니다 부분 */
+       /* background-color: rgb(11, 11, 114);  */
+
+       display: inline-flex;
+       justify-content: flex-start;
+
+       flex-wrap: wrap;
+
+       margin: 0;
+     }
+
+     .alarm-nickname>span>:first-child {
+       /* nickname */
+       width: 52px;
+       height: 18px;
+     }
+
+
+     .alarm-nickname>span>:last-child {
+       /* 날짜 */
+       width: 52px;
+       height: 18px;
+     }
+
+     .people-list-box>button {
+       /* 팔로잉 버튼 */
+       border-radius: 20%;
+       border: none;
+
+       font-size: 14px;
+
+       width: 100px;
+       height: 48px;
+
+       padding: 5px 10px;
+     }
+
+
+
+
+     .people-list-container {
+       /* 닉네임 이름 프로필 아이콘들이 있는 컨테이너 */
+       /* background-color: yellow; */
+       height: 100%;
+     }
+
+     .people-list-box {
+       /* 닉네임 이름 프로필 아이콘이 있는 박스(단위는 하나) */
+       /* background-color: aqua; */
+       /* border: 1px solid; */
+
+       padding: 20px;
+
+       display: flex;
+       align-items: center;
+
+       position: relative;
+
+       gap: 20px;
+
+     }
+
+     .nikname-name {
+       /* 닉네임과 이름만 있는 박스 */
+       /* border: 1px solid; */
+
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       /* align-items: center; */
+
+       /* position: relative; */
+
+       font-size: 15px;
+
+       padding: 10px;
+     }
+
+     .delete-box {
+       /* x표시 누르는 박스 */
+
+       /* background-color: hotpink; */
+
+       position: absolute;
+       right: 30px;
+     }
+
+     .material-symbols-outlined {
+       /* x 이미지 */
+       font-variation-settings:
+         'FILL' 0,
+         'wght' 300,
+         'GRAD' 0,
+         'opsz' 24
+     }
+
+     .nikname-name>:nth-child(1) {
+       font-family: 'Satisfy', cursive;
+       font-weight: bold;
+     }
+
+
+
+     .menu-item {
+       display: flex;
+       align-items: center;
+       font-size: 16px;
+       color: #000;
+       padding: 8px;
+       border-radius: 8px;
+       transition: background 0.2s;
+     }
+
+     .menu-item img {
+       width: 22px;
+       height: 22px;
+       margin-right: 10px;
+     }
+
+     .menu-item:hover {
+       background: #f2f2f2;
+     }
+
+     .menu-nav>.menu-item.search:hover .search-submenu-container {
+       display: block;
+     }
+
+     .menu-settings {
+       /* 더 보기  */
+       position: relative;
+
+       margin-top: auto;
+
+     }
+
+     .settings-sub {
+       /* 더 보기 누르면 나오는 서브메뉴 */
+       background-color: white;
+       border: 1px solid;
+
+       position: absolute;
+       top: -510px;
+       left: 10px;
+       border-radius: 12px;
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+       display: none;
+       flex-direction: column;
+       justify-content: space-evenly;
+
+       padding: 10px;
+
+       width: 266px;
+       height: 500px;
+     }
+
+     .settings-sub.show {
+       /* 더 보기 누르면 나오는 서브메뉴 */
+       background-color: white;
+       border: 1px solid;
+
+       position: absolute;
+       top: -410px;
+       left: 10px;
+       border-radius: 12px;
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+
+       padding: 0 20px;
+
+       width: 266px;
+       height: 400px;
+     }
+
+     .settings-sub>.settings-sub-box {
+       /* 서브메뉴 안의 글자와 아이콘들 */
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       /* border: 1px solid; */
+     }
+
+     .settings-sub>:nth-child(5) {
+       padding-bottom: 30px;
+       border-bottom: 5px solid rgb(179, 178, 178);
+     }
+
+
+
+
+     /* drop-down */
+
+     /* 메인메뉴의 리스트에 마우스를 갖다대면 서브메뉴가 나오게 하겠다 */
+     /* .wrapper>header>nav>ul.main-menu>li:hover>.sub-menu{
+            display: block;
+        } */

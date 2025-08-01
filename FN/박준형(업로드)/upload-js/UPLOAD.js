@@ -1,3 +1,4 @@
+
 window.onload = () => {
 
   // ============ 변수 설정 ============
@@ -6,6 +7,12 @@ window.onload = () => {
   const uploadSection = document.getElementById("upload");
   const previewSection = document.getElementById("preview");
   const backBtn = document.getElementById("backBtn");
+
+//   if (window.location.search.includes("refresh=true") && !sessionStorage.getItem("refreshed")) {
+//   sessionStorage.setItem("refreshed", "true");
+//   location.reload();
+// }
+
 
   // ============ 사진 업로드 ============
   fileInput.addEventListener("change", function () {
@@ -173,5 +180,3 @@ window.onload = () => {
   }
 
 }
-
-// =======================

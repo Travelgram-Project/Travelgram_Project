@@ -236,6 +236,10 @@ function isvalid(text) {
 }
 
 
-
+document.querySelector('.menu-item.make')?.addEventListener('click', (e) => {
+    e.stopPropagation(); // 전파는 막되
+    // e.preventDefault(); // ❌ 이건 절대 넣지 마
+    // 기본 링크 동작이 일어나야 UPLOAD.html로 이동됨
+});
 
 

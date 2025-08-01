@@ -418,7 +418,7 @@
         document.addEventListener("click", (e) => {
 
             const clickInside = menuItem.contains(e.target);    // 검색칸 클릭
-            const clickSearch = subMenu.contains(e.target)|| submenu.contains(e.target.closet(".delete-box"));     // 검색 서브메뉴 클릭
+            const clickSearch = subMenu.contains(e.target) // || submenu.contains(e.target.closet(".delete-box"));     // 검색 서브메뉴 클릭
 
 
             const clickInsideAlarm = menuItemAlarm.contains(e.target);  // 알림칸 클릭
@@ -491,8 +491,8 @@
                 historyEl.className = "item";
                 peopleListEl.className = "people-list-box";
                 niknameBoxEl.className = "niknmae-name";
-                aXEl.className = "delete-box";
-                xEl.className = "material-symbols-outlined"
+                // aXEl.className = "delete-box";
+                // xEl.className = "material-symbols-outlined"
 
                 nameEl.textContent = text;        // 입력받은 text를 nameEl에 저장
                 xEl.textContent = "close";      // 새로운 x노드 생성
@@ -500,7 +500,7 @@
 
                 aXEl.addEventListener('click', (e) => {  // x를 누르면 그 검색기록만 삭제
                     // console.log(e.target);
-                    e.stopPropagation();
+                    // e.stopPropagation();
                     historyEl.remove();
                 });
 

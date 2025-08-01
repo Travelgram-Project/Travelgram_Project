@@ -3,7 +3,7 @@
      /* 피드 틀 설정 */
      .feed-container {
          /* margin: 0 ; */
-         width: clamp(300px, 90%, 500px);
+         width: clamp(300px,90%,500px);
          /* 반응형 */
          display: flex;
          flex-direction: column;
